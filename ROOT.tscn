@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://j5ylltbkvldv"]
+
+[ext_resource type="PackedScene" uid="uid://bffs0yqr2jdrx" path="res://LEVEL.tscn" id="1_2y2um"]
+[ext_resource type="PackedScene" uid="uid://dskwg155tjvd6" path="res://JOHN.tscn" id="2_6etbl"]
+
+[node name="Node2D" type="Node2D" unique_id=1948357905]
+
+[node name="TileMapLayer" parent="." unique_id=1545658832 instance=ExtResource("1_2y2um")]
+position = Vector2(411, 95)
+
+[node name="CharacterBody2D" parent="." unique_id=14093926 instance=ExtResource("2_6etbl")]
+position = Vector2(441, 88.99999)

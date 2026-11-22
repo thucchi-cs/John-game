@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://dncf41db73rgp"]
+
+[ext_resource type="PackedScene" uid="uid://dskwg155tjvd6" path="res://JOHN.tscn" id="1_s1vvv"]
+[ext_resource type="PackedScene" uid="uid://cwwu4rl5lhgfg" path="res://LEVEL2.tscn" id="2_lvtfu"]
+[ext_resource type="Texture2D" uid="uid://dbgp7xydo5ekv" path="res://evilTorchSprite.png" id="3_lvtfu"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0ds61"]
+radius = 209.98236
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fvps2"]
+size = Vector2(538, 20)
+
+[node name="Node2D" type="Node2D" unique_id=660887864]
+
+[node name="J" parent="." unique_id=14093926 instance=ExtResource("1_s1vvv")]
+position = Vector2(441, 89)
+
+[node name="TileMapLayer" parent="." unique_id=2051362972 instance=ExtResource("2_lvtfu")]
+position = Vector2(441, 89)
+
+[node name="RigidBody2D" type="RigidBody2D" parent="." unique_id=344575441]
+position = Vector2(1371, -1704)
+collision_layer = 32768
+collision_mask = 32775
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D" unique_id=582550860]
+scale = Vector2(0.275, 0.275)
+shape = SubResource("CircleShape2D_0ds61")
+
+[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D" unique_id=1834622576]
+scale = Vector2(0.425, 0.425)
+texture = ExtResource("3_lvtfu")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=117623330]
+position = Vector2(1427, -1700)
+collision_layer = 32768
+collision_mask = 32768
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=833359823]
+position = Vector2(269, 267)
+shape = SubResource("RectangleShape2D_fvps2")
+
+[connection signal="body_shape_entered" from="Area2D" to="J" method="_on_area_2d_body_shape_entered"]

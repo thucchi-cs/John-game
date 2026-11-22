@@ -1,0 +1,70 @@
+[gd_scene format=3 uid="uid://dgogtrm4743p0"]
+
+[ext_resource type="Texture2D" uid="uid://cy4m6gahromdb" path="res://victoryDance.png" id="1_ghtpg"]
+[ext_resource type="Script" uid="uid://ck7si71yuaqjj" path="res://animated_sprite_2d.gd" id="2_hwgbt"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hwgbt"]
+atlas = ExtResource("1_ghtpg")
+region = Rect2(0, 0, 236, 384)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lg358"]
+atlas = ExtResource("1_ghtpg")
+region = Rect2(236, 0, 236, 384)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p8hb6"]
+atlas = ExtResource("1_ghtpg")
+region = Rect2(472, 0, 236, 384)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fh5cl"]
+atlas = ExtResource("1_ghtpg")
+region = Rect2(708, 0, 236, 384)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_48onp"]
+atlas = ExtResource("1_ghtpg")
+region = Rect2(0, 384, 236, 384)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0mea2"]
+atlas = ExtResource("1_ghtpg")
+region = Rect2(236, 384, 236, 384)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ikqep"]
+atlas = ExtResource("1_ghtpg")
+region = Rect2(472, 384, 236, 384)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0jm0w"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hwgbt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lg358")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p8hb6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fh5cl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_48onp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0mea2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ikqep")
+}],
+"loop": 1,
+"name": &"dance",
+"speed": 5.0
+}]
+
+[node name="Node2D" type="Node2D" unique_id=1251359051]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1290260419]
+position = Vector2(579, 321.5)
+scale = Vector2(4.8898306, 1.6588541)
+sprite_frames = SubResource("SpriteFrames_0jm0w")
+animation = &"dance"
+script = ExtResource("2_hwgbt")

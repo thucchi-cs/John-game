@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b8gueymuaonyo"
+path="res://.godot/imported/19. MaestroRage - Dark Skies.mp3-9d8ea98daa46c01b151cf1fb493560ef.mp3str"
+
+[deps]
+
+source_file="res://19. MaestroRage - Dark Skies.mp3"
+dest_files=["res://.godot/imported/19. MaestroRage - Dark Skies.mp3-9d8ea98daa46c01b151cf1fb493560ef.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
